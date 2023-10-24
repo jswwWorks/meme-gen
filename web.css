@@ -1,5 +1,6 @@
+
 body {
-  background-color: rgb(224, 224, 200);
+  background-color: rgb(229, 229, 217);
 }
 
 h1 {
@@ -8,6 +9,15 @@ h1 {
 }
 
 #header {
-  display: flex;
-  align-items: center;
+  margin-left: 10%;
+}
+
+blockquote {
+  font-family: 'Sriracha', cursive;
+  color: rgba(205, 56, 81, 0.45);
+}
+
+hr {
+  border-top: 1.5px solid rgba(205, 56, 81, 0.45);
+  width: 90vw;
 }
