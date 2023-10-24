@@ -1,0 +1,13 @@
+body {
+  background-color: rgb(224, 224, 200);
+}
+
+h1 {
+  font-family: 'Sriracha', cursive;
+  color: rgba(205, 56, 81, 0.834);
+}
+
+#header {
+  display: flex;
+  align-items: center;
+}
