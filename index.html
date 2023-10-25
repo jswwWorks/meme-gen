@@ -18,11 +18,12 @@
     "In Sweden, it is forbidden by law to be a criminal." -meme on Reddit
   </blockquote>
   <hr>
-  <div>
-    <input class="top-text" type="text" placeholder="Top text here">
-    <input class="image-url" type="url" placeholder="Image link here">
-    <input class="top-text" type="text" placeholder="Bottom text here">
-    <input type="submit">
-  </div>
+  <form>
+    <input id="top-text" type="text" placeholder="Top text here">
+    <input id="image-url" type="url" placeholder="Image link here">
+    <input id="bottom-text" type="text" placeholder="Bottom text here">
+    <input type="submit" onclick="makeMeme()">
+  </form>
+  <script src="memegen.js"></script>
 </body>
 </html>
