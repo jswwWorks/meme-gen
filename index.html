@@ -21,12 +21,15 @@
   <br>
   <p>Hello! Please enter the top text, an image link, and bottom text to generate your meme.</p>
   <form>
-    <input id="top-text" type="text" placeholder="Top text here" required>
+    <!--<input id="top-text" type="text" placeholder="Top text here" required> -->
     <input id="image-url" type="url" placeholder="Image link here" required>
-    <input id="bottom-text" type="text" placeholder="Bottom text here" required>
-    <!-- the 'required in the inputs isn't actually making it required! I still get the successful submit buttons-->
-    <button id="submit" type="submit">
+    <!-- <input id="bottom-text" type="text" placeholder="Bottom text here" required> -->
+    <input type="submit">
   </form>
+  <div id="memeStorage"></div> <!-- this is where I will append the memes to-->
   <script src="memegen.js"></script>
 </body>
 </html>
+
+
+<!-- 10/24 the 'required in the inputs isn't actually making it required! I still get the successful submit buttons-->

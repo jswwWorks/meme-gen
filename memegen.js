@@ -1,16 +1,48 @@
-document.addEventListener("DOMContentLoaded", function() {
-  alert('files are linked'); // Eventually I'll get rid of this!
-})
+const memeRequestForm = document.querySelector('form'); //
 
-const memeRequested = document.getElementById('submit'); //
-memeRequested.addEventListener("click", function() {
-  alert('you submitted the meme');
-  const topText = document.querySelector('#top-text');
-  const picForMeme = document.querySelector('#image-url');
-  const bottomText = document.querySelector('#bottom-text');
-  alert(`${topText} ${picForMeme} ${bottomText}`); // this is the only line that did not run
-  //[object HTMLInputElement] [object HTMLInputElement] [object HTMLInputElement]
-  // is it normal for it to come out like this?
+/*
+current puzzle: learn how to save and store data from submitted form (what am I missing?)
+
+
+
+*/
+
+
+
+memeRequestForm.addEventListener("submit", function(e) {
+  e.preventDefault(); // prevents the page from loading
+
+  alert('testing image creation');
+  const newMeme = document.createElement('img'); // this makes an empty image element for me to put stuff into
+  //const imgLink = querySelector('')
+
+  const imgLink = memeRequestForm.getElementById('image-url'); // maybe I need to use some kind of innerText?
+  /* I think I see the problem:
+    what I'm trying to do is reach into the form's input value for the image url input box and grab that url
+
+    where I'm having trouble is that I want to grab the url but even
+
+  */
+
+
+  newMeme.setAttribute('src', imgLink); // inserts link into element
+  // now to append the element to the code
+  // it's not grabbing the right element
+
+  document.getElementById('memeStorage').append(newMeme); // this puts the image into div container
+
+
+  // ignore for now:
+  //const topText = document.querySelector('#top-text');
+
+  // Note: you are about to deal with this part, but first make sure the event runs
+  //const picForMeme = document.querySelector('#image-url');
+
+
+
+  // ignore for now:
+  //const bottomText = document.querySelector('#bottom-text');
+  //alert(`${topText} ${picForMeme} ${bottomText}`); // this is the only line that did not run
 })
 
 
