@@ -1,10 +1,10 @@
 const memeRequestForm = document.querySelector('form'); //
 const imageInput = document.querySelector('input[name=imageURL]');
-
+const topTextInput = document.querySelector('input[name=topText]');
+const bottomTextInput = document.querySelector('input[name=bottomText]');
 
 memeRequestForm.addEventListener("submit", function(e) {
   e.preventDefault(); // prevents the page from loading
-
 
   // Shows the image
   const newMeme = document.createElement('img'); // this makes an empty image element for me to put stuff into
@@ -12,6 +12,23 @@ memeRequestForm.addEventListener("submit", function(e) {
   document.getElementById('memeStorage').append(newMeme); // this puts the image into div container
 
 
+  // top text
+  // this and the bottom text will change soon for when I attach it to image
+  // all I'm doing rn is proving I can display each value. Baby steps!
+
+
+  const newTopText = document.createElement('p');
+  newTopText.innerText = topTextInput.value;
+  document.getElementById('memeStorage').append(newTopText);
+
+  const newBottomText = document.createElement('p');
+  newBottomText.innerText = bottomTextInput.value;
+  document.getElementById('memeStorage').append(newBottomText);
+
+  // After storing the values of the meme, reset them for next submission:
+  imageInput.value = '';
+  topTextInput.value = '';
+  bottomTextInput.value = '';
 
   // ignore for now:
   //const topText = document.querySelector('#top-text');

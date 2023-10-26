@@ -19,25 +19,27 @@
   </blockquote>
   <hr>
   <br>
-  <p>Hello! Please enter the top text, an image link, and bottom text to generate your meme.</p>
+  <p class="instructions">Hello! Please enter the top text, an image link, and bottom text to generate your meme.</p>
   <form id="memeForm">
-    <!--
-      <p>
-      <label for="">Top Text here:</label>
-      <input id="top-text" type="text" placeholder="Top text here" required>
-      </label>
-      </p>
-      mimic this for the bottom text
-      also add min/max characters
-    -->
 
-    <p>
+    <p class="instructions">
+      <label for="">Top Text here:
+        <input name="topText" type="text" placeholder="Top text here"> <!--min="1" max="75" required-->
+      </label>
+    </p>
+
+    <p class="instructions">
       <label for="">Image Url Here:
         <input name="imageURL" type="url" placeholder="Image link here" required>
       </label>
     </p>
 
-    <!-- <input id="bottom-text" type="text" placeholder="Bottom text here" required> -->
+    <p class="instructions">
+      <label for="">Bottom Text here:
+        <input name="bottomText" type="text" placeholder="Bottom text here" min="1" max="75" required>
+      </label>
+    </p>
+
     <input type="submit">
   </form>
   <section id="memeStorage"></section> <!-- this is where I will append the memes to-->

@@ -1,3 +1,4 @@
+/* to do still: format meme input text, but I could do this in a JS function!*/
 
 body {
   background-color: rgb(229, 229, 217);
@@ -16,7 +17,7 @@ blockquote {
   font-size: 20px;
 }
 
-p {
+p.instructions {
   font-family: 'Sriracha', cursivfe;
   color: rgba(97, 35, 45, 0.834);
   font-size: 17px;
