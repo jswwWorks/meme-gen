@@ -1,35 +1,16 @@
 const memeRequestForm = document.querySelector('form'); //
-
-/*
-current puzzle: learn how to save and store data from submitted form (what am I missing?)
-
-
-
-*/
-
+const imageInput = document.querySelector('input[name=imageURL]');
 
 
 memeRequestForm.addEventListener("submit", function(e) {
   e.preventDefault(); // prevents the page from loading
 
-  alert('testing image creation');
+
+  // Shows the image
   const newMeme = document.createElement('img'); // this makes an empty image element for me to put stuff into
-  //const imgLink = querySelector('')
-
-  const imgLink = memeRequestForm.getElementById('image-url'); // maybe I need to use some kind of innerText?
-  /* I think I see the problem:
-    what I'm trying to do is reach into the form's input value for the image url input box and grab that url
-
-    where I'm having trouble is that I want to grab the url but even
-
-  */
-
-
-  newMeme.setAttribute('src', imgLink); // inserts link into element
-  // now to append the element to the code
-  // it's not grabbing the right element
-
+  newMeme.setAttribute('src', imageInput.value); // inserts link into element
   document.getElementById('memeStorage').append(newMeme); // this puts the image into div container
+
 
 
   // ignore for now:
@@ -43,7 +24,7 @@ memeRequestForm.addEventListener("submit", function(e) {
   // ignore for now:
   //const bottomText = document.querySelector('#bottom-text');
   //alert(`${topText} ${picForMeme} ${bottomText}`); // this is the only line that did not run
-})
+});
 
 
 /*

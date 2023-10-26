@@ -20,13 +20,27 @@
   <hr>
   <br>
   <p>Hello! Please enter the top text, an image link, and bottom text to generate your meme.</p>
-  <form>
-    <!--<input id="top-text" type="text" placeholder="Top text here" required> -->
-    <input id="image-url" type="url" placeholder="Image link here" required>
+  <form id="memeForm">
+    <!--
+      <p>
+      <label for="">Top Text here:</label>
+      <input id="top-text" type="text" placeholder="Top text here" required>
+      </label>
+      </p>
+      mimic this for the bottom text
+      also add min/max characters
+    -->
+
+    <p>
+      <label for="">Image Url Here:
+        <input name="imageURL" type="url" placeholder="Image link here" required>
+      </label>
+    </p>
+
     <!-- <input id="bottom-text" type="text" placeholder="Bottom text here" required> -->
     <input type="submit">
   </form>
-  <div id="memeStorage"></div> <!-- this is where I will append the memes to-->
+  <section id="memeStorage"></section> <!-- this is where I will append the memes to-->
   <script src="memegen.js"></script>
 </body>
 </html>
