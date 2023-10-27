@@ -23,18 +23,18 @@
   <form id="memeForm">
 
     <p class="instructions">
-      <label for="">Top Text here:
-        <input name="topText" type="text" placeholder="Top text here" min="1" max="75" required>
+      <label for="theTopText">Top Text here:
+        <input name="topText" id="theTopText" type="text" placeholder="Top text here" min="1" max="75" required>
       </label>
     </p>
     <p class="instructions">
-      <label for="">Image Url Here:
-        <input name="imageURL" type="url" placeholder="Image link here" required>
+      <label for="theImageLink">Image Url Here:
+        <input name="imageURL" id="theImageLink" type="url" placeholder="Image link here" required>
       </label>
     </p>
     <p class="instructions">
-      <label for="">Bottom Text here:
-        <input name="bottomText" type="text" placeholder="Bottom text here" min="1" max="75" required>
+      <label for="theBottomText">Bottom Text here:
+        <input name="bottomText" id="theBottomText" type="text" placeholder="Bottom text here" min="1" max="75" required>
       </label>
     </p>
     <input type="submit">
@@ -43,6 +43,3 @@
   <script src="memegen.js"></script>
 </body>
 </html>
-
-
-<!-- 10/24 the 'required in the inputs isn't actually making it required! I still get the successful submit buttons-->
