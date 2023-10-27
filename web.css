@@ -23,8 +23,9 @@ blockquote {
 
 p.instructions {
   font-family: 'Sriracha', cursivfe;
-  color: rgba(97, 35, 45, 0.834);
+  color: rgba(55, 33, 96, 0.614);
   font-size: 17px;
+  text-align: center;
 }
 
 div.memes {
