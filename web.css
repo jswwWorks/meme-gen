@@ -23,7 +23,29 @@ p.instructions {
   font-size: 17px;
 }
 
-p:not(.instructions) { /* could apply this to the meme text paragraph */
+div.memes {
+  position: relative;
+}
+
+/*
+img.theImage {
+  object-fit: fill;
+}
+*/
+
+p.top {
+  position: absolute;
+  position: top;
+  text-align: center;
+}
+
+p.bottom {
+  position: absolute;
+  position: bottom;
+  text-align: center;
+}
+
+p.memeText {
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: rgb(243, 240, 240);
   font-size: 50px;
