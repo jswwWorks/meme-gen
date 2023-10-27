@@ -23,6 +23,16 @@ p.instructions {
   font-size: 17px;
 }
 
+p:not(.instructions) { /* could apply this to the meme text paragraph */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(243, 240, 240);
+  font-size: 50px;
+  text-shadow: -2px 2px 0 black,
+                2px 2px 0 black,
+                2px -2px 0 black,
+                -2px -2px 0 black;
+}
+
 hr {
   border-top: 1.5px solid rgba(205, 56, 81, 0.45);
   width: 90vw;

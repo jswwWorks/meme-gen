@@ -9,12 +9,16 @@ memeRequestForm.addEventListener("submit", function(e) {
   // Shows the image
   const newMeme = document.createElement('img'); // this makes an empty image element for me to put stuff into
   newMeme.setAttribute('src', imageInput.value); // inserts link into element
-  document.getElementById('memeStorage').append(newMeme); // this puts the image into div container
+  //document.getElementById('memeStorage').append(newMeme); // this puts the image into div container
+
+  const memeContainer = document.createElement('div'); // this creates the div container to put the image into
+  document.getElementById('memeStorage').append(memeContainer); // appends div container to the page
+  memeContainer.append(newMeme);
+ // for the real deal, figure out setAttribute for adding properties to the top and bottom text
 
 
   // top text
   // this and the bottom text will change soon for when I attach it to image
-  // all I'm doing rn is proving I can display each value. Baby steps!
 
 
   const newTopText = document.createElement('p');
