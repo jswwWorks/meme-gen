@@ -3,48 +3,20 @@ const imageInput = document.querySelector('input[name=imageURL]');
 const topTextInput = document.querySelector('input[name=topText]');
 const bottomTextInput = document.querySelector('input[name=bottomText]');
 
-
 memeRequestForm.addEventListener("submit", function(e) {
   e.preventDefault(); // prevents the page from refreshing
-
-  // Grabs the image
-  // ignore these for now
-  //const newMeme = document.createElement('img'); // this makes an empty image element for me to put stuff into
-  //newMeme.classList.add('theImage'); // adds class for easier css selection
-  //newMeme.setAttribute('src', imageInput.value); // inserts link into element
-
   // Creating div to store the image
   const memeContainer = document.createElement('div'); // this creates the div container to put the image into
   memeContainer.classList.add('memes'); // gives div element 'memes' class for styling
   document.getElementById('memeStorage').append(memeContainer); // finds the memeStorage section and appends div to it
 
-  // the test:
   let myUrl = imageInput.value;
-  console.log(typeof myUrl);
-  memeContainer.style.height = '500px';
-  memeContainer.style.width = '500px';
-
   memeContainer.style.backgroundImage = `url(${myUrl})`; // should set background to this url
-
-  // memeContainer.backgroundSize = 'auto'; //this didn't work
-
-  // next idea: learn how to retrieve the image size from the url and record the height and width as
-  // variables to set in here
+  memeContainer.style.backgroundSize = 'contain'; //this didn't work
+  memeContainer.style.height = '400px';
+  memeContainer.style.width = '400px';
+  memeContainer.style.backgroundPosition = 'center center';
   memeContainer.style.backgroundRepeat = 'no-repeat'; // prevents background image from repeating
-
-  console.log(imageInput.value);
-  // end of test
-
-  /*
-  dont want image to repeat itself
-  want to fit div container to sive of image
-
-  do some digging around into that image
-
-  */
-
-  // ignore for now during test
-  //memeContainer.append(newMeme); // appends the image to the div
 
   // Top text
   const newTopText = document.createElement('p');
@@ -67,38 +39,26 @@ memeRequestForm.addEventListener("submit", function(e) {
 
 });
 
+  /*
 
-/*
+  search MDN for why things came together with backgroundPosition styling
 
-document.body.append(newMeme); // this puts the image after the body; I might want to have this in a div, though
+  // Grabs the image
+  const newMeme = document.createElement('img'); // this makes an empty image element for me to put stuff into
+  newMeme.classList.add('theImage'); // adds class for easier css selection
+  newMeme.setAttribute('src', imageInput.value); // inserts link into element;
+  memeContainer.append(newMeme);
+  */
 
-// Idk when I was using this stuff:
+  /*
+  // creating the image to grab its info
+  let myHeight = newMeme.height; // this was returning 0, maybe because I didn't append it to the page?
+  let myWidth = newMeme.width;
+  console.log(myHeight, myWidth);
+  */
 
-  // ignore for now:
-  //const topText = document.querySelector('#top-text');
-
-  // Note: you are about to deal with this part, but first make sure the event runs
-  //const picForMeme = document.querySelector('#image-url');
-
-
-  // ignore for now:
-  //const bottomText = document.querySelector('#bottom-text');
-  //alert(`${topText} ${picForMeme} ${bottomText}`); // this is the only line that did not run
-
-
-  Here is why i didn't set the background property because I didn't want to use CSS in my JS but it looks like i might have to
-
-  ask P why object fill is behaving the way it is
-
-  why dont you take a look first and see how to do css styling in js
-
-*/
-
-
-/*
-Progress!
-
-okay first I made sure the HTML and JS files are properly linked
-
-now I want to work on creating and appending an image based on the url providd
-*/
+  // the test:
+  /*
+  memeContainer.style.height = `${myHeight}px`;
+  memeContainer.style.width = `${myWidth}px`;
+  */
